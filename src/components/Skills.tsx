@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const skills = [
   "Java",
   "Spring Boot",
@@ -12,10 +14,12 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="py-24 bg-gradient-to-b from-black to-gray-900">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-10 text-center">
-          My <span className="text-blue-500">Skills</span>
-        </h2>
+       <Reveal>
+<div className="max-w-6xl mx-auto px-6">
+       <h2 className="text-4xl font-bold mb-10 text-center">
+  Tech <span className="text-yellow-400">Stack</span>
+</h2>
+
 
         <div className="flex flex-wrap justify-center gap-4">
           {skills.map((skill) => (
@@ -28,6 +32,8 @@ export default function Skills() {
           ))}
         </div>
       </div>
+    </Reveal>
+      
     </section>
   );
 }

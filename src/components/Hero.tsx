@@ -1,18 +1,33 @@
+"use client";
+
+import { motion } from "framer-motion";
+import LiveBackground from "./LiveBackground";
+
+
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
-      <div className="text-center px-6 max-w-3xl">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-          Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Shravan Desale
-          </span>
-        </h1>
-        
+<section
+  id="home"
+  className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black"
+>
+            <LiveBackground />
 
-        <p className="text-gray-400 text-lg md:text-xl mb-10">
-          Full-Stack Developer • Computer Engineering Student • GATE Aspirant
-        </p>
+     <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center px-6 max-w-3xl"
+      >
+        {/* existing content unchanged */}
+      <div className="text-center px-6 max-w-3xl">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+  Hi, I&apos;m <span className="text-yellow-400">Shravan Desale</span>
+</h1>
+
+<p className="text-gray-400 text-base sm:text-lg md:text-xl mb-8">
+  Full-Stack Developer building scalable web applications with modern technologies.
+</p>
+
 
         <div className="flex justify-center gap-6 flex-wrap">
           <button className="px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-semibold">
@@ -32,6 +47,7 @@ export default function Hero() {
 
         </div>
       </div>
+            </motion.div>
     </section>
     
   );
